@@ -21,3 +21,15 @@ function all_divMouseOver() {
 
 all_divMouseOver();
 all_divMouseLeave();
+
+
+// TOOGGLE BUTTON
+let toggle_btn = document.getElementsByClassName("toggle_btn")[0];
+const menu = document.getElementsByClassName("menu");
+
+toggle_btn.addEventListener("click", function() {
+    console.log("Wesh tu m'as cliqué gros");
+    for (let i = 0; i < menu.length; i++) {
+        menu[i].classList.toggle("actived");
+    }
+})

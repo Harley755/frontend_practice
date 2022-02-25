@@ -52,8 +52,17 @@ header .row {
     color: #ff8b68;
 }
 
-.row .toggle {
+.row #tooggle {
     display: none;
+}
+
+#tooggle button {
+    background-color: transparent;
+    border: none;
+    display: flex;
+    align-items: center;
+    color: #efc2b3;
+    cursor: pointer;
 }
 
 nav {
@@ -63,15 +72,46 @@ nav {
 }
 
 nav ul {
-    width: 42vw;
+    width: 38vw;
     align-items: center;
     justify-content: space-between;
     text-transform: uppercase;
     list-style: none;
 }
 
+.bag {
+    display: flex;
+    align-items: center;
+}
+
+.bag1 {
+    display: none;
+}
+
+.bag1 button {
+    display: flex;
+    align-items: center;
+}
+
+.only {
+    margin-left: 3vw;
+    list-style: none;
+    background-color: transparent;
+}
+
+.only button {
+    background-color: transparent;
+    border: none;
+    color: #efc2b3;
+    cursor: pointer;
+}
+
 .sub_menu {
     display: none;
+}
+
+nav {
+    display: flex;
 }
 
 nav ul li:hover .sub_menu {
@@ -94,6 +134,10 @@ nav ul li:hover .sub_menu ul li {
     border-radius: 0;
     background: transparent;
     text-align: left;
+}
+
+#right {
+    display: none;
 }
 
 nav ul li:hover .sub_menu ul li:hover {
@@ -131,7 +175,7 @@ nav ul a:hover {
 
 .title {
     position: absolute;
-    right: 15%;
+    right: 9%;
     bottom: 35%;
     color: #1a2456;
 }
@@ -140,14 +184,14 @@ nav ul a:hover {
     font-family: prompt, sans-serif;
     font-weight: bold;
     font-size: 40px;
-    width: 420px;
+    width: 480px;
     line-height: 50px;
     padding-bottom: 15px;
     letter-spacing: 3px;
 }
 
 .title h2 {
-    font-weight: normal;
+    font-weight: 700;
     font-size: 17px;
 }
 
@@ -386,6 +430,7 @@ nav ul a:hover {
     width: 86%;
     margin: auto;
     display: flex;
+    flex-wrap: wrap;
 }
 
 footer {
@@ -534,4 +579,161 @@ footer {
     font-size: .8rem;
     text-decoration: none;
     font-weight: bold;
+}
+
+
+/*---------- RESPONSIVE ----------*/
+
+@media (max-width: 991px) {
+    .banner {
+        background-image: url("../images/hero_banner/hero.webp");
+        height: 75vh;
+    }
+    .row #tooggle {
+        display: block;
+        position: absolute;
+        right: 7vw;
+    }
+    header {
+        display: block;
+        width: 97%;
+        position: fixed;
+        margin: 15px 1.2%;
+    }
+    .bag {
+        display: none;
+    }
+    .bag1 {
+        display: block;
+        position: absolute;
+        right: 2vw;
+    }
+    nav ul {
+        display: none;
+        width: 100vw;
+    }
+    nav ul li {
+        text-align: center;
+        padding-top: 25px;
+        font-size: 18px;
+    }
+    nav ul li:hover .sub_menu {
+        width: 20vw;
+        margin-top: -5vw;
+        margin-left: 56vw;
+    }
+    nav ul li:hover .sub_menu ul li {
+        width: 20vw;
+        padding: 5px 10px;
+    }
+    .title {
+        right: 15%;
+        bottom: 30%;
+    }
+    .title h1 {
+        width: 350px;
+        font-weight: 800;
+    }
+    .title h2 {
+        width: 300px;
+    }
+    .actived {
+        display: block;
+    }
+    /* SECTION 2 CONSOLE */
+    .col1 {
+        margin-bottom: 20px;
+    }
+    .col1,
+    .col1 img {
+        height: 25vh;
+    }
+    .para {
+        width: 260px;
+    }
+    .vanish1 span {
+        font-size: 15px;
+    }
+    .container {
+        width: 70%;
+        margin: auto;
+    }
+    .col1 {
+        width: 49%;
+    }
+    .col1 a p,
+    .row_full_width a p {
+        font-size: 14px;
+    }
+    .col1 a .sub_title1 h3,
+    .row_full_width a .sub_title1 h3,
+    .number1 a .sub_title1 h3 {
+        font-weight: 700;
+        font-size: 18px;
+    }
+    .console .container .row_full_width img {
+        width: 100%;
+        height: 37vh;
+    }
+    /*---------- SECTION 2 ----------*/
+    .console2 {
+        width: 100%;
+        height: 75vh;
+        margin-top: 0;
+        background-image: url("../images/section3_perfect_module/shop-banner-module.webp");
+        background-size: auto;
+        background-repeat: no-repeat;
+    }
+    .console .container .row_full_width {
+        height: 38vh;
+        margin-top: 80px;
+        position: relative;
+    }
+    .console2 .title2 h1 {
+        font-weight: bold;
+        font-size: 2.5rem;
+        margin-top: 100px;
+    }
+    /*---------- MODULE ----------*/
+    .container2 {
+        width: 70%;
+        margin: auto;
+        margin-top: -14vh;
+    }
+    .number1 {
+        width: 48.5%;
+    }
+    /*---------- FOOTER ----------*/
+    .container3 {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .container3 .footer_col:first-child,
+    .container3 .footer_col:nth-child(2) {
+        width: 30%;
+        margin-bottom: 5vh;
+    }
+    .container3 .footer_col:nth-child(3) {
+        width: 25%;
+    }
+    .container3 .footer_col:nth-child(4) {
+        margin-left: 5vw;
+        width: 26%;
+    }
+    .master {
+        width: 75%;
+    }
+    .container3 .footer_col:nth-child(5) {
+        padding-left: 3vw;
+    }
+    /*---------- COOKIES ----------*/
+    .cookies {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .button {
+        padding: 10px 0 0 0;
+    }
 }
